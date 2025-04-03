@@ -5,19 +5,20 @@ import Link from "next/link";
 
 // Step 1: Collect the files from blogdata directory
 // Step 2: Iterate through the files and cisplay them in the blog page
-const Blog = () => {
-  const [blogs, setBlogs] = useState([]);
+const Blog = (props) => {
+  // console.log(props);
+  const [blogs, setBlogs] = useState(props.allBlogs);
 
-  useEffect(() => {
-    console.log("use effect running");
-    fetch('http://localhost:3005/api/blogs').then((a) => {
-      return a.json()
-        .then((parsed) => {
-          // console.log(parsed);
-          setBlogs(parsed);
-        })
-    })
-  }, []);
+  // useEffect(() => {
+  //   console.log("use effect running");
+  //   fetch('http://localhost:3005/api/blogs').then((a) => {
+  //     return a.json()
+  //       .then((parsed) => {
+  //         // console.log(parsed);
+  //         setBlogs(parsed);
+  //       })
+  //   })
+  // }, []);
   return (
     <div className={styles.container}>
       <main className={styles.main}>
@@ -39,6 +40,14 @@ const Blog = () => {
       </main >
     </div >
   )
+}
+
+export async function getServerSideProps(context) {
+  let data = await fetch('http://localhost:3005/api/blogs')
+  let allBlogs = await data.json();
+  return {
+    props: { allBlogs }, // will be passed to the page component as props 
+  }
 }
 
 export default Blog;
