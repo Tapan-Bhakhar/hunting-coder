@@ -3,6 +3,8 @@ import React from 'react';
 import styles from "@/styles/Blog.module.css";
 import Link from "next/link";
 
+// Step 1: Collect the files from blogdata directory
+// Step 2: Iterate through the files and cisplay them in the blog page
 const Blog = () => {
   return (
     <main className={styles.main}>
