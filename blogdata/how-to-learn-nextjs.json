@@ -3,5 +3,6 @@
     "content": "Next.js is a powerful React framework that enables server-side rendering and static site generation. To learn Next.js, start by familiarizing yourself with React fundamentals. Follow the official Next.js documentation to set up your development environment and create your first application. Explore key features such as routing, API routes, and data fetching methods. Practice building projects to solidify your understanding. Utilize online tutorials, courses, and community resources for additional support. Engage with the Next.js community through forums and social media to enhance your learning experience.",
     "description": "A comprehensive guide to learning Next.js, including resources, tips, and best practices for building React applications with server-side rendering and static site generation.",
     "author": "Alice Johnson",
+    "metadesc": "Learn Next.js with this comprehensive guide. Discover resources, tips, and best practices to enhance your skills in building React applications with server-side rendering and static site generation.",
     "slug": "how-to-learn-nextjs"
 }

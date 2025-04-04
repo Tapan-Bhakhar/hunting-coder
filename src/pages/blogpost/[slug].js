@@ -6,6 +6,9 @@ import * as fs from 'fs';
 // Step 1: Find the file corresponding to the slug
 // Step 2: Read the file and display the content
 const Slug = (props) => {
+  function createMarkup(c) {
+    return {__html: c};
+  }
   const [blog, setBlog] = useState(props.myBlog);
   //   const router = useRouter();
 
@@ -27,9 +30,7 @@ const Slug = (props) => {
       <main className={styles.main}>
         <h1>{blog && blog.title}</h1>
         <hr />
-        <div>
-          {blog && blog.content} {/* blog hoga tohi ye populate hoga */}
-        </div>
+        { blog && <div dangerouslySetInnerHTML={createMarkup(blog.content)}></div> } {/* blog hoga tohi ye populate hoga */}
       </main>
     </div>
   )

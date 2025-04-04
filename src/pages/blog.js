@@ -9,17 +9,6 @@ import * as fs from 'fs';
 const Blog = (props) => {
   // console.log(props);
   const [blogs, setBlogs] = useState(props.allBlogs);
-
-  // useEffect(() => {
-  //   console.log("use effect running");
-  //   fetch('http://localhost:3005/api/blogs').then((a) => {
-  //     return a.json()
-  //       .then((parsed) => {
-  //         // console.log(parsed);
-  //         setBlogs(parsed);
-  //       })
-  //   })
-  // }, []);
   return (
     <div className={styles.container}>
       <main className={styles.main}>
@@ -28,7 +17,7 @@ const Blog = (props) => {
             <div key={blogItem.slug}>
               <Link href={`/blogpost/${blogItem.slug}`}>
                 <h3 className={styles.blogItemh3}>{blogItem.title}</h3></Link>
-              <p className={styles.blogItemp}>{blogItem.content.substr(0, 121)}...</p>
+              <p className={styles.blogItemp}>{blogItem.metadesc.substr(0, 121)}...</p>
             </div>
           )
         })}

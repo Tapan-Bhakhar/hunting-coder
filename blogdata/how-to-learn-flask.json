@@ -3,5 +3,6 @@
     "content": "Flask is a lightweight web framework for Python that is easy to learn and use. To get started with Flask, first ensure you have a basic understanding of Python. Install Flask using pip and create a simple application to understand its structure. Explore Flask's routing, templates, and forms to build dynamic web applications. Utilize the official Flask documentation and online tutorials for guidance. Practice by creating small projects and gradually increase complexity. Join Flask communities for support and resources.",
     "description": "A beginner's guide to learning Flask, including installation, basic concepts, and resources for further learning.",
     "author": "Jane Smith",
+    "metadesc": "Learn Flask with this beginner's guide. Discover installation steps, basic concepts, and resources for further learning.",
     "slug": "how-to-learn-flask"
 }
