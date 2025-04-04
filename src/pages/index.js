@@ -7,10 +7,12 @@ export default function Home() {
       <style jsx>
         {`
         h2 {
-          font-size: 41px;
+           font-size: 2.5rem;
         }
         h3 {
-          font-size: 27px;
+          font-size: 1.75rem;
+          margin-top: 11px;
+          margin-bottom: 0;
         }
         `}
       </style>
@@ -21,31 +23,31 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      
-
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Hunting Coder
-        </h1>
 
         <div className={styles.imagewrap}>
           {/* <Image className={styles.myImg} src="/homeImage.png" alt="HomePage" width={237} height={158} /> */}
           <img className={styles.myImg} src="/homeImage.png" alt="HomePage" width={237} height={158} />
         </div>
+        <h1 className={styles.title}>
+          &lt;HuntingCoder/&gt;
+        </h1>
         
-        <p className={styles.description}>
-          A blog for hunting coders by a hunting coder
-        </p>
-
         <div className="blogs">
-          <h2>Latest Blogs</h2>
+          <h2 className={styles.h2}>Latest Blogs</h2>
           <div className="blogItem">
-            <h3>how to learn javascript in 2022</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor in tenetur blanditiis porro, quasi incidunt earum quam odio deserunt aperiam assumenda quaerat.</p>
-            <h3>how to learn javascript in 2022</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor in tenetur blanditiis porro, quasi incidunt earum quam odio deserunt aperiam assumenda quaerat.</p>
-            <h3>how to learn javascript in 2022</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor in tenetur blanditiis porro, quasi incidunt earum quam odio deserunt aperiam assumenda quaerat.</p>
+            <h3 className={styles.h3}>how to learn javascript in 2022</h3>
+            <p className={styles.p}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor in tenetur blanditiis porro, quasi incidunt earum quam odio deserunt aperiam assumenda quaerat.</p>
+            <button className={styles.btn}>Read More</button>
+
+            <h3 className={styles.h3}>how to learn javascript in 2022</h3>
+            <p className={styles.p}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor in tenetur blanditiis porro, quasi incidunt earum quam odio deserunt aperiam assumenda quaerat.</p>
+            <button className={styles.btn}>Read More</button>
+
+            <h3 className={styles.h3}>how to learn javascript in 2022</h3>
+            <p className={styles.p}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor in tenetur blanditiis porro, quasi incidunt earum quam odio deserunt aperiam assumenda quaerat.</p>
+            <button className={styles.btn}>Read More</button>
+          
           </div>
         </div>
       </main>

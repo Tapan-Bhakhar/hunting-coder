@@ -3,10 +3,53 @@
     margin: auto;
 }
 
-.mb3 {
-    margin-bottom: 21px;
+.form {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .formlabel {
-    margin: 0 50px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.input{
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background-color: #f1f1f1;
+}
+
+.textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background-color: #f1f1f1;
+    max-width: 100%;
+    /* resize: none; */
+}
+
+.button {
+    background-color: #43637c;
+    color: white;
+    padding: 15px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1.2rem;
+}
+.button:hover {
+    opacity: 0.8;
+}
+
+.small {
+    color: grey;
 }

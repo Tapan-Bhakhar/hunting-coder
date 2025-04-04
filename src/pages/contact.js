@@ -48,28 +48,22 @@ const Contact = () => {
 
       <form onSubmit={handleSubmit}>
 
-        <div className={styles.mb3}>
+        <div className={styles.form}>
           <label htmlFor="name" className={styles.formlabel}>Enter your Name</label>
-          <input type="text" value={name} onChange={handleChange} className="form-control" id="name" name="name" placeholder="Enter Name" />
-        </div>
-
-        <div className={styles.mb3}>
+          <input className={styles.input} type="text" value={name} onChange={handleChange} id="name" name="name" placeholder="Enter Name" />
+        
           <label htmlFor="email" className={styles.formlabel}>Email address</label>
-          <input type="email" value={email} onChange={handleChange} className="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Enter email" />
-          <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
-        </div>
-
-        <div className={styles.mb3}>
+          <input className={styles.input} type="email" value={email} onChange={handleChange} id="email" name="email" aria-describedby="emailHelp" placeholder="Enter email" />
+          <small className={styles.small}>&nbsp;We'll never share your email with anyone else.</small>
+        <br />
           <label htmlFor="phone" className={styles.formlabel}>Phone Number</label>
-          <input type="phone" value={phone} onChange={handleChange}  className="form-control" id="phone" name="phone" placeholder="Enter Phone no." />
-        </div>
-
-        <div className={styles.mb3}>
+          <input className={styles.input} type="phone" value={phone} onChange={handleChange} id="phone" name="phone" placeholder="Enter Phone no." />
+      
           <label htmlFor="desc" className={styles.formlabel}>Eleborate your concern</label>
-          <textarea value={desc} onChange={handleChange} className="form-control" id="desc" name="desc" placeholder='Write your concern here' />
+          <textarea className={styles.textarea} value={desc} onChange={handleChange} id="desc" name="desc" placeholder='Write your concern here' rows='5' />
         </div>
 
-        <button type="submit" className="btn btn-primary">Submit</button>
+        <button type="submit" className={styles.button}>Submit</button>
       </form>
 
     </div>
