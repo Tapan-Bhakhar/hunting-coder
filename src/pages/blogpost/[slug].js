@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import styles from "@/styles/BlogPost.module.css";
+import * as fs from 'fs';
 
 // Step 1: Find the file corresponding to the slug
 // Step 2: Read the file and display the content
@@ -34,13 +35,26 @@ const Slug = (props) => {
   )
 }
 
-export async function getServerSideProps(context) {
-  const { slug } = context.query;
 
-  let data = await fetch(`http://localhost:3005/api/getblog?slug=${slug}`)
-  let myBlog = await data.json();
+export async function getStaticPaths() {
   return {
-    props: { myBlog }, // will be passed to the page component as props 
+    paths: [
+      { params: { slug: "how-to-learn-flask" } },
+      { params: { slug: "how-to-learn-javascript" } },
+      { params: { slug: "how-to-learn-nestjs" } },
+      { params: { slug: "how-to-learn-nextjs" } },
+    ],
+    fallback: true
+  };
+}
+
+export async function getStaticProps(context) {
+  // console.log("context", context);
+  const { slug } = context.params;
+
+  let myBlog = await fs.promises.readFile(`blogdata/${slug}.json`, 'utf-8');
+  return {
+    props: { myBlog: JSON.parse(myBlog) }, // will be passed to the page component as props 
   }
 }
 
