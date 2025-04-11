@@ -38,13 +38,20 @@ const Slug = (props) => {
 
 
 export async function getStaticPaths() {
+  let allBlogs = await fs.promises.readdir(`blogdata`);
+  allBlogs = allb.map((item) => {
+    return {
+      params: { slug: item.split(".")[0] } // slug is the name of the file without extension
+    }
+  })
   return {
-    paths: [
-      { params: { slug: "how-to-learn-flask" } },
-      { params: { slug: "how-to-learn-javascript" } },
-      { params: { slug: "how-to-learn-nestjs" } },
-      { params: { slug: "how-to-learn-nextjs" } },
-    ],
+    paths: allBlogs,
+    // paths: [
+    //   { params: { slug: "how-to-learn-flask" } },
+    //   { params: { slug: "how-to-learn-javascript" } },
+    //   { params: { slug: "how-to-learn-nestjs" } },
+    //   { params: { slug: "how-to-learn-nextjs" } },
+    // ],
     fallback: true
   };
 }
