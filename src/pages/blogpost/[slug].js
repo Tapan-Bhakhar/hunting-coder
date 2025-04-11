@@ -39,7 +39,7 @@ const Slug = (props) => {
 
 export async function getStaticPaths() {
   let allBlogs = await fs.promises.readdir(`blogdata`);
-  allBlogs = allb.map((item) => {
+  allBlogs = allBlogs.map((item) => {
     return {
       params: { slug: item.split(".")[0] } // slug is the name of the file without extension
     }
